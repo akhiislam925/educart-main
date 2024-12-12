@@ -72,36 +72,7 @@
     </div>
 
     <script src="assets/js/courses.js"></script>
-   <script>
-    
-    let selectedProgram = '';
 
-function redirectToProgramPage(program) {
-    if (!program) return; // Exit if no value is selected
-    selectedProgram = program; // Store the program value
-    console.log("Program Selected: ", program);
-}
-document.getElementById('add-course-btn').addEventListener('click', function () {
-    console.log("HII")
-    if (!selectedProgram) {
-        alert("Please select a program before adding a course.");
-        return;
-    }
-    
-    console.log("Program is Selected (selected program): ", selectedProgram);
-
-    // Redirect to the target page with the selected program
-       const urlParams = new URLSearchParams(window.location.search);
-            const currentPage = urlParams.get('page') || 'home';
-            const allowedPages = ['dashboard', 'add-courses', 'add-outcomes', 'add-questions', 'home'];
-
-            if (allowedPages.includes(currentPage)) {
-                window.location.href = ?page=${currentPage}&program=${selectedProgram};
-            } else {
-                console.log("Invalid page");
-            }
-});
-</script>
 
 </body>
 </html>

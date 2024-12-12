@@ -4,9 +4,16 @@ function getProgramFromURL() {
     return urlParams.get('program');
 }
 
+var selectedProgram=""
+function redirectToProgramPage(program) {
+    if (!program) return; // Exit if no value is selected
+    selectedProgram = program; // Store the program value
+    console.log("Program Selected: ", program);
+}
+
 // Fetch and render courses from the server
 function loadCourses() {
-    const program = getProgramFromURL();
+    const program = selectedProgram;
 
     // console.log("Value of program",program)
 
@@ -47,12 +54,7 @@ function loadCourses() {
         .catch(error => alert('Error loading courses: ' + error.message));
 }
 
-var selectedProgram=""
-function redirectToProgramPage(program) {
-    if (!program) return; // Exit if no value is selected
-    selectedProgram = program; // Store the program value
-    console.log("Program Selected: ", program);
-}
+
 // Add a new course
 document.getElementById('add-course-form').addEventListener('submit', function(event) {
     event.preventDefault();
