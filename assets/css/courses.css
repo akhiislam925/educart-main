@@ -1,0 +1,126 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8,#e0e0e0);
+    color: #333;
+}
+
+.main-container {
+    background:#f0f4f8;
+    display: flex;
+    flex-direction: column; /* Stack the sections vertically */
+    flex-wrap: nowrap; /* Ensure no wrapping occurs */
+    padding: 20px;
+    gap: 20px; /* Add space between sections */
+}
+
+.left-section, .right-section {
+    background: #ffffff;
+    margin-top: 50px; /* Center-align the sections horizontally */
+    margin-left: 90px;
+    max-width: 600px; /* Optional: set a maximum width for both sections */
+    width: 100%; /* Ensure full width */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+h2 {
+    
+    color:   #5A3E79;
+    margin-top: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 95%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg,#A76286,  #5A3E79);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg,  #5A3E79, #A76286);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+a {
+    color: #ff4d4d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.modal {
+    display: none;
+    /* Other modal styles */
+}
+
+.modal.show {
+    display: block;
+}
+@media (max-width: 768px) {
+    .main-container {
+        padding: 10px;
+    }
+
+    .left-section, .right-section {
+        max-width: 100%; /* Take up full width on smaller screens */
+        padding: 10px;
+    }
+}

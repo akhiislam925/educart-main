@@ -1,0 +1,98 @@
+/* Home Section */
+body {
+  font-family: Georgia Bold;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: #e0e0e0; /* Light text for readability */
+}
+.home {
+  color: #130123;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 80%;
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column;
+  align-items: center; /* Center child elements horizontally */
+  justify-content: center; /* Center child elements vertically (if needed) */
+  height: auto; /* Adjust height as required */
+}
+
+/* Dashboard Buttons Section */
+.bottom {
+  background: linear-gradient(90deg, #A76286, #5A3E79);
+  color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; /* Center the section */
+}
+.bottom h4{
+
+    font-family: Georgia, Times, serif;
+    font-size:larger bold;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+
+}
+
+.bottom ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.bottom ul li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.bottom button {
+
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.home button:hover {
+  background: #d6d6d6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home {
+      padding: 30px 15px;
+      max-width: 100%;
+  }
+
+  .bottom {
+      flex-direction: column;
+      gap: 15px;
+      max-width: 100%;
+  }
+
+  .bottom ul li {
+      width: 100%;
+  }
+
+  .bottom button {
+      width: 100%;
+  }
+}
